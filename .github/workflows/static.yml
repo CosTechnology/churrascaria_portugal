@@ -31,6 +31,10 @@ jobs:
         with:
           node-version: 18
 
+      - name: Create .env file
+        run: |
+          echo "REACT_APP_NAME=${{ vars.REACT_APP_NAME }}" >> .env
+
       - name: Install dependencies
         run: npm install
 
