@@ -76,3 +76,17 @@
     margin-left: 0;
   }
 }
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 0.5rem;
+  transition: transform 0.15s;
+}
+.contact-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(0.9);
+}
+.contact-icon svg {
+  display: block;
+}
