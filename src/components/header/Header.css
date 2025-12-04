@@ -1,23 +1,44 @@
 .navbar {
   width: 100%;
-  padding: 1rem 2rem;
-  background: #fff;
+  padding: 1rem 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.navbar .container {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  box-sizing: border-box; /* Adicionado */
-  overflow-x: hidden;     /* Adicionado */
 }
 
 .navbar-logo {
-  height: 60px;
-  max-width: 90vw;
+  height: 50px;
+  width: auto;
   object-fit: contain;
 }
 
-@media (max-width: 600px) {
-  .navbar {
-    padding: 1rem 0.5rem; /* Reduz o padding em telas pequenas */
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.nav-link:hover {
+  color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+  .navbar-logo {
+    height: 40px;
   }
 }

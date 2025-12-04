@@ -1,92 +1,79 @@
 .contact-section {
-  background: #fafafa;
-  padding: 3rem 1rem;
-  border-radius: 12px;
-  max-width: 600px;
-  margin: 3rem auto;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  background: var(--light-gray);
+  padding: 5rem 1rem;
+  text-align: center;
 }
 
 .contact-section h2 {
-  text-align: center;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #d7263d;
+  color: var(--primary-color);
 }
 
 .contact-section p {
-  text-align: center;
-  margin-bottom: 2rem;
-  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #666;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .contact-info {
   display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-  align-items: flex-start;
-  margin-bottom: 2rem;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  flex: 1;
+  min-width: 280px;
+  transition: transform 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--dark-gray);
 }
 
 .contact-row {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 0.7rem;
-  font-size: 1.05rem;
-  word-break: break-all;
+  gap: 1rem;
 }
 
 .contact-btn {
-  background: #25d366;
-  color: #fff;
-  padding: 0.5rem 1.2rem;
-  border: none;
-  border-radius: 30px;
-  font-size: 1rem;
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  color: white;
   font-weight: 600;
-  transition: background 0.2s;
-  display: inline-block;
-  margin-left: 0.3rem;
-  white-space: nowrap;
+  transition: filter 0.2s;
+}
+
+.contact-btn.whatsapp {
+  background-color: #25D366;
 }
 
 .contact-btn.email {
-  background: #d7263d;
+  background-color: #d7263d;
 }
 
 .contact-btn:hover {
-  filter: brightness(0.9);
-}
-
-@media (max-width: 600px) {
-  .contact-section {
-    padding: 1.5rem 0.5rem;
-    max-width: 98vw;
-  }
-  .contact-info {
-    gap: 0.7rem;
-  }
-  .contact-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.3rem;
-  }
-  .contact-btn {
-    width: 100%;
-    margin-left: 0;
-  }
-}
-
-.contact-icon {
-  display: inline-flex;
-  align-items: center;
-  margin-left: 0.5rem;
-  transition: transform 0.15s;
-}
-.contact-icon:hover {
-  transform: scale(1.1);
-  filter: brightness(0.9);
-}
-.contact-icon svg {
-  display: block;
+  filter: brightness(1.1);
 }
